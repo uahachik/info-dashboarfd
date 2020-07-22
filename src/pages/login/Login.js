@@ -1,34 +1,23 @@
 import React, { useState, useRef } from 'react';
-import { Redirect } from 'react-router-dom';
-import BadCredentials from './layout/BadCredentials';
+import PropTypes from 'prop-types';
 
-const Login = () => {
+import credentials from '../../data/credentials';
+import BadCredentials from './BadCredentials';
+
+const Login = ({ history }) => {
 	const [userName, setUserName] = useState('');
 	const [userPassword, setUserPassword] = useState('');
 	const [badCredentials, setBadCredentials] = useState(false);
 	const nameRef = useRef(), passRef = useRef(null);
 
-	const credentials = async () => {
-		return {
-			username: 'demo',
-			password: 'demo'
-		};
-	};
-
 	const onSubmit = async e => {
 		e.preventDefault();
-		const { username, password } = await credentials();
+		const { username, password } = credentials();
 
 		if (username === userName && password === userPassword) {
-			console.log('redirect');
-
-			return <Redirect to="/" />;
+			return history.push('/');
 		} else {
 			setBadCredentials(true);
-
-			setTimeout(() => {
-				setBadCredentials(false);
-			}, 3000);
 		}
 	};
 
@@ -107,5 +96,9 @@ const Login = () => {
 		</div>
 	);
 };
+
+Login.propTypes = {
+  history: PropTypes.object.isRequired,
+}
 
 export default Login;
