@@ -1,0 +1,29 @@
+.wraper {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	min-height: 122vh;
+	background-color: rgba(0, 0, 0, 0.712);
+	z-index: 2;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+
+.main {
+	display: inline-block;
+	position: relative;
+	min-height: 496px;
+	width: 746px;
+	padding: 20px;
+	margin: 0 1rem;
+	color: #141825;
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	font-family: -apple-system, BlinkMacSystemFont, 'Muli';
+	font-style: italic;
+}

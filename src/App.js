@@ -1,18 +1,23 @@
-import React, { StrictMode } from 'react';
+import React, { StrictMode, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
 
 import Login from './pages/login/Login';
 import Dashboard from './pages/dashboard/Dashboard';
+import PrivateRoute from './PrivateRoute';
 
-import './App.css';
+const App = () => {
+	const [isAuth, setIsAuth] = useState(true);
 
-function App() {
 	return (
 		<StrictMode>
 			<Router>
 				<Switch>
-					<Route path="/login" component={Login} />
-					<Route path="/" component={Dashboard} />
+					<Route
+						path="/login"
+						component={props => <Login setIsAuth={setIsAuth} {...props} />}
+					/>
+					<PrivateRoute path="/" component={Dashboard} auth={isAuth} />
 				</Switch>
 			</Router>
 		</StrictMode>

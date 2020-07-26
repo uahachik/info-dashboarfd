@@ -1,0 +1,28 @@
+.dropdown {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border: 2px solid #4c7dab4a;
+	border-radius: 5px;
+	border-radius: 7px;
+	font: 400 16px Arial;
+	opacity: 0;
+	transition: 350ms cubic-bezier(0.2, 0, 0.2, 1) 0ms;
+	z-index: 1;
+}
+
+.item {
+	padding: 0.25rem 15px 0.25rem 14px;
+	color: #1e90ff;
+	font-style: italic;
+}
+
+.item:hover {
+	color: #033c73;
+}
+
+.btn:focus {
+	box-shadow: none;
+}
