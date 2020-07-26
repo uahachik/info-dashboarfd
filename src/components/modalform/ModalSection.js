@@ -16,10 +16,6 @@ const ModalSection = ({ portCode }) => {
   const [noArrivalFlights, setNoArrivalFlights] = useState(false);
   const [noDepartureFlights, setNoDepartureFlights] = useState(false);
   const [loading, setLoading] = useState(true);
-  // console.log('arrivalPeriod', arrivalPeriod);
-  // console.log('departurePeriod', departurePeriod);
-  // console.log(arrivalFlights)
-  // console.log(departureFlights)
   
   useEffect(() => {
     setArrivalFlights([]);
@@ -94,7 +90,12 @@ const ModalSection = ({ portCode }) => {
               />
             </div>
 
-            <InfoMonitor />
+            <div className="monitorContainer">
+              <div className="row" style={{height: 326, marginRight: -5, marginLeft: -5}}>
+                <InfoMonitor flights={arrivalFlights} noFlights={noArrivalFlights} action="arrive" />
+                <InfoMonitor flights={departureFlights} noFlights={noDepartureFlights} action="depart" />
+              </div>
+            </div>
           </section>
         )
       }

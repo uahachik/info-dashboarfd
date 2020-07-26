@@ -47,9 +47,10 @@ const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => 
     <div className="d-flex align-items-center">
       <span style={{...infoStyle, paddingRight: 5}}>
         {borts === 0 ? '' : borts}{noFlights && 'NO'}
-        {/* {noFlights ? 'NO' : borts} */}
       </span>
-      <span style={{color: '#223e5bf7'}}>borts {action} for the last</span>
+      <span style={{color: '#01143c'}}>
+        bort{borts !== 1 && 's'} {action}{borts === 1 && 's'} for the last
+      </span>
 
       <div>
         <div className="container position-relative px-0">
@@ -71,7 +72,7 @@ const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => 
         </div>
       </div>
 
-      <span style={{color: '#223e5bf7'}}>hour{period !== 'one' && 's'}</span>
+      <span style={{color: '#01143c'}}>hour{period !== 'one' && 's'}</span>
     </div>
   </div>
   );
