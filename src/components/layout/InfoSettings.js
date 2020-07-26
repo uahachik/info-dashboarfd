@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import './InfoSettings.css';
 
@@ -26,11 +26,12 @@ const timeConverter = stringValue => {
 const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => {
   const { transition } = useAnimation();
   const [show, setShow] = useState(false);
-  const [period, setPeriod] = useState('one');
+  const fligthsPeriod = useRef('one');
+  let {current: period} = fligthsPeriod;
 
   const getPeriod = e => {
     const timeValue = e.currentTarget.textContent;
-    setPeriod(timeValue);
+    fligthsPeriod.current = timeValue;
     setShow(false);
     if (action === 'arrive') {
       setTiming.setArrivalPeriod(timeConverter(timeValue));
@@ -38,7 +39,7 @@ const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => 
     } else if (action === 'depart') {
       setTiming.setDeparturePeriod(timeConverter(timeValue));
     }
-  }
+  };
 
   const infoStyle = {color: '#1e90ffcc', fontSize: '1.25rem', fontStyle: 'italic', fontWeight: '700'};
   return (
@@ -48,7 +49,7 @@ const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => 
         {borts === 0 ? '' : borts}{noFlights && 'NO'}
         {/* {noFlights ? 'NO' : borts} */}
       </span>
-      <span>borts {action} for the last</span>
+      <span style={{color: '#223e5bf7'}}>borts {action} for the last</span>
 
       <div>
         <div className="container position-relative px-0">
@@ -56,9 +57,7 @@ const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => 
             className="btn dropdown-toggle py-0 px-1"
             onClick={() => setShow(prevState => !prevState)}
           >
-            <span style={infoStyle}>
-              {period}
-            </span>
+            <span style={infoStyle}>{period}</span>
           </button>
           
           {show && (
@@ -72,10 +71,10 @@ const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => 
         </div>
       </div>
 
-      <span>hour{period !== 'one' && 's'}</span>
+      <span style={{color: '#223e5bf7'}}>hour{period !== 'one' && 's'}</span>
     </div>
   </div>
-  )
+  );
 };
 
 InfoSettings.defaultProps = {

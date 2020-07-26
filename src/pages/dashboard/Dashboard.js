@@ -6,9 +6,6 @@ import ModalForm from '../../components/modalform/ModalForm';
 const Dashboard = () => {
 	const [isOpenModal, setIsOpenModal] = useState(false);
 	const [currentPort, setCurrentPort] = useState(null);
-	
-	document.body.style.overflow = 'scroll';
-	document.body.style.overflowX = 'hidden';
 
 	const onOpenModal = code => {
 		setIsOpenModal(true);
@@ -23,7 +20,8 @@ const Dashboard = () => {
 	return (
 		<>
 			<div 
-				className="v-100 d-flex flex-wrap justify-content-center align-items-center py-2 bg-info"
+				className="position-absolute h-100 d-flex flex-wrap
+						justify-content-center align-items-center py-2 bg-info overflow-auto"
 			>
 				<h4
 					className="w-100 text-center bg-light"
@@ -38,7 +36,7 @@ const Dashboard = () => {
 						<table
 							key={name.slice(0, 5)}
 							className=" position-relative table mx-5"
-							style={{width: '19em', minHeight: 357, border: '2px ridge #DDDDFF'}}
+							style={{width: '19em', height: 357, border: '2px ridge #DDDDFF'}}
 							onClick={() => onOpenModal(code)}
 						>
 							<tbody >
@@ -84,7 +82,7 @@ const Dashboard = () => {
 				})}
 			</div>
 
-      {isOpenModal && <ModalForm closeModal={closeModal} portCode={currentPort} />}
+			{isOpenModal && <ModalForm closeModal={closeModal} portCode={currentPort} />}
 		</>
 	);
 };

@@ -1,7 +1,7 @@
 .wraper {
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: -17px;
 	right: 0;
 	display: grid;
 	justify-content: center;
@@ -21,9 +21,17 @@
 	padding: 20px;
 	margin: 0 1rem;
 	color: #141825;
-	background: #fff;
+	background: #f1f7ef;
 	border-radius: 2px;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	font-family: -apple-system, BlinkMacSystemFont, 'Muli';
 	font-style: italic;
+}
+
+.footerContainer {
+	top: 496px;
+	left: 0px;
+	background-color: #00162cfa;
+	border: 2px solid #6d6d6efa;
+	border-top: none;
 }

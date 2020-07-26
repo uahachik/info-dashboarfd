@@ -5,7 +5,8 @@ import './ModalForm.css';
 
 import useAnimation from '../../hooks/useAnimation';
 import ModalHeader from './ModalHeader';
-import ModalSecton from './ModalSecton';
+import ModalSection from './ModalSection';
+import ModalFooter from './ModalFooter';
 
 const modalRoot = document.getElementById('modal-root');
 
@@ -27,7 +28,9 @@ const ModalForm = ({ closeModal, portCode }) => {
 
         <div className="border-top border-info" />
 
-        <ModalSecton portCode={portCode} />
+        <ModalSection portCode={portCode} />
+
+        <ModalFooter />
 
       </div>
     </div>,
