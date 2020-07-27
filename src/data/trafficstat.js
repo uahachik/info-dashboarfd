@@ -42,7 +42,7 @@ const url = `https://USERNAME:PASSWORD@opensky-network.org/api/flights/all?begin
   })
   // console.log(counts);
   
-  airports.forEach(x => { counts[x] = (counts[x] || null) + 1 });
+  airports.forEach(x => { counts[x] = (counts[x] || 0) + 1 });
   
   let traffic = {};
   Object.entries(counts).sort((a, b) => b[1] - a[1]).forEach(count => {

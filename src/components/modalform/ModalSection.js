@@ -90,7 +90,7 @@ const ModalSection = ({ portCode }) => {
             </div>
 
             <div className="monitorContainer">
-              <div className="row" style={{height: 326, marginRight: -5, marginLeft: -5}}>
+              <div className="row" style={{height: 326, margin: '0 -6px'}}>
                 <InfoMonitor flights={arrivalFlights} noFlights={noArrivalFlights} action="arrive" />
                 <InfoMonitor flights={departureFlights} noFlights={noDepartureFlights} action="depart" />
               </div>

@@ -5,8 +5,27 @@ import Moment from 'react-moment';
 
 const InfoMonitor = ({ flights, noFlights, action }) => {
   return (
-    <div className="col px-1 monitor" style={{border: '1px solid whitesmoke', fontSize: 12}}>
+    <div className="col px-1 monitor">
       <div className="container">
+
+        <div className="row monitorHeader">
+          <div className="col-2 h-25" style={{paddingLeft: 0}}>
+            CALLSIGN
+          </div>
+          <div className="col-3 h-25" style={{borderRight: '1px solid #f5f5f57d', borderLeft: '1px solid #f5f5f57d'}}>
+            Arriving Time
+          </div>
+          <div className="col-2 h-25 px-1" style={{borderRight: '1px solid #f5f5f57d'}}>
+            {action === 'arrive' ? 'Departure Airport' : 'Arrival Airport'}
+          </div>
+          <div className="col-2 h-25 px-1" style={{borderRight: '1px solid #f5f5f57d'}}>
+            {action === 'arrive' ? 'Distance to AA' : 'Distance to DA'}
+          </div>
+          <div className="col-3 h-25">
+            Departure Time
+          </div>
+        </div>
+
         {!noFlights ? 
           flights.reverse().map(flight => {
             const {callsign, estArrivalAirport, estDepartureAirport,
