@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-// import Moment from 'react-moment';
-// import 'moment-timezone';
 
+import endOfInfoPeriod from '../../data/endOfInfoPeriod';
 import InfoSettings from '../layout/InfoSettings';
 import InfoMonitor from '../layout/InfoMonitor';
 import Loading from '../layout/Loading';
@@ -23,7 +22,7 @@ const ModalSection = ({ portCode }) => {
     setNoArrivalFlights(false);
     setNoDepartureFlights(false);
 
-    const end = parseInt(Date.now().toString().slice(0, -3)) - 60 * 60 * 24;
+    const end = endOfInfoPeriod();
     
     const arrivalUrl = `https://USERNAME:PASSWORD@opensky-network.org/api/flights/arrival?airport=${portCode}&begin=${end - 60 * 60 * arrivalPeriod}&end=${end}`;
     axios.get(arrivalUrl)
