@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './InfoMonitor.css';
 import Moment from 'react-moment';
 
-import Marquee from './Marquee';
+// import Marquee from './Marquee';
 
 const InfoMonitor = ({ flights, noFlights, action }) => {
   return (
