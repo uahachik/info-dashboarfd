@@ -11,7 +11,7 @@ const ModalFooter = () => {
     >
       <small>
         All information is provided as of yesterday. 
-        That is, up to <Moment format="YYYY/MM/DD hh:mm" unix>{endOfInfoPeriod()}</Moment>
+        That is, up to <Moment format="YYYY/MM/DD HH:MM" unix>{endOfInfoPeriod()}</Moment>
       </small>
     </footer>
   )
