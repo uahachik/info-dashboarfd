@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './InfoMonitor.css';
 import Moment from 'react-moment';
 
+import Marquee from './Marquee';
+
 const InfoMonitor = ({ flights, noFlights, action }) => {
   return (
     <div className="col px-1 monitor">
@@ -40,7 +42,7 @@ const InfoMonitor = ({ flights, noFlights, action }) => {
             const distanceToDepartureAirport = calcShortDistance(estDepartureAirportHorizDistance, estDepartureAirportVertDistance);
               
             return (
-              <div key={callsign} className="row">
+              <div key={callsign} className="row marquee">
                 <div className="col-2 h-25" style={{paddingLeft: '0.12rem', borderRight: '1px solid #f5f5f57d'}}>
                   {callsign}
                 </div>

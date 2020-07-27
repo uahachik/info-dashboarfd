@@ -6,7 +6,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import PrivateRoute from './PrivateRoute';
 
 const App = () => {
-	const [isAuth, setIsAuth] = useState(true);
+	const [isAuth, setIsAuth] = useState(false);
 
 	return (
 		<StrictMode>
