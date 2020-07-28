@@ -21,11 +21,11 @@ const Dashboard = () => {
 		<>
 			<div 
 				className="position-absolute h-100 d-flex flex-wrap
-						justify-content-center align-items-center py-2 bg-info overflow-auto"
+						justify-content-center align-items-center pb-2 bg-info overflow-auto"
 			>
 				<h4
-					className="w-100 text-center bg-light"
-					style={{color: '#033C73', textTransform: 'uppercase', padding: '16px 3px'}}
+					className="position-sticky w-100 text-center bg-light"
+					style={{top: 0, color: '#033C73', textTransform: 'uppercase', padding: '16px 3px', zIndex: 1}}
 					>
 						10 world's airports with the heaviest air traffic
 					</h4>
