@@ -43,38 +43,38 @@ const InfoSettings = ({ settings: { action, borts, noFlights, setTiming } }) => 
 
   const infoStyle = {color: '#1e90ffcc', fontSize: '1.25rem', fontStyle: 'italic', fontWeight: '700'};
   return (
-    <div className="h5 text-dark">
-    <div className="d-flex align-items-center">
-      <span style={{...infoStyle, paddingRight: 5}}>
-        {borts === 0 ? '' : borts}{noFlights && 'NO'}
-      </span>
-      <span style={{color: '#01143c'}}>
-        bort{borts !== 1 && 's'} {action}{borts === 1 && 's'} for the last
-      </span>
+    <div className={window.innerWidth > 576 ? 'h5 text-dark' : 'h6 mb-0 text-dark'}>
+      <div className="d-flex align-items-center">
+        <span style={{...infoStyle, paddingRight: 5}}>
+          {borts === 0 ? '' : borts}{noFlights && 'NO'}
+        </span>
+        <span style={{color: '#01143c'}}>
+          bort{borts !== 1 && 's'} {action}{borts === 1 && 's'} for the last
+        </span>
 
-      <div>
-        <div className="container position-relative px-0">
-          <button
-            className="btn dropdown-toggle py-0 px-1"
-            onClick={() => setShow(prevState => !prevState)}
-          >
-            <span style={infoStyle}>{period}</span>
-          </button>
-          
-          {show && (
-            <div className="dropdown" style={transition}>
-              {period !== 'one' && <button className="dropdown-item item bg-light" onClick={getPeriod}>one</button>}
-              {period !== 'two' && <button className="dropdown-item item bg-light" onClick={getPeriod}>two</button>}
-              {period !== 'three' && <button className="dropdown-item item bg-light" onClick={getPeriod}>three</button>}
-              {period !== 'four' && <button className="dropdown-item item bg-light" onClick={getPeriod}>four</button>}
-            </div>
-          )}
+        <div>
+          <div className="container position-relative px-0">
+            <button
+              className="btn dropdown-toggle py-0 px-1"
+              onClick={() => setShow(prevState => !prevState)}
+            >
+              <span style={infoStyle}>{period}</span>
+            </button>
+            
+            {show && (
+              <div className="dropdown" style={transition}>
+                {period !== 'one' && <button className="dropdown-item item bg-light" onClick={getPeriod}>one</button>}
+                {period !== 'two' && <button className="dropdown-item item bg-light" onClick={getPeriod}>two</button>}
+                {period !== 'three' && <button className="dropdown-item item bg-light" onClick={getPeriod}>three</button>}
+                {period !== 'four' && <button className="dropdown-item item bg-light" onClick={getPeriod}>four</button>}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
 
-      <span style={{color: '#01143c'}}>hour{period !== 'one' && 's'}</span>
+        <span style={{color: '#01143c'}}>hour{period !== 'one' && 's'}</span>
+      </div>
     </div>
-  </div>
   );
 };
 

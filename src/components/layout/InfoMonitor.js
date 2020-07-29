@@ -47,7 +47,8 @@ const InfoMonitor = ({ flights, noFlights, action }) => {
           </div>
         </div>
 
-        <Marquee marquee={noFlights || !isMarquee ? '' : 'marquee'}>
+        {/* <Marquee marquee={noFlights || !isMarquee ? '' : 'marquee'}> */}
+        <Marquee>
           <div ref={marqueeHeight}>
           {!noFlights ? 
             flights.reverse().map(flight => {

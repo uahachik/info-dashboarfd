@@ -20,7 +20,7 @@ const Dashboard = () => {
 	return (
 		<>
 			<div 
-				className="position-absolute h-100 d-flex flex-wrap
+				className="position-absolute h-100 w-100 d-flex flex-wrap
 						justify-content-center align-items-center pb-2 bg-info overflow-auto"
 			>
 				<h4

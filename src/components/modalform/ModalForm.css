@@ -13,11 +13,18 @@
 	opacity: 0;
 }
 
+@media (max-width: 768px) {
+	.wraper {
+		left: 0;
+	}
+}
+
 .main {
-	display: inline-block;
-	position: relative;
-	min-height: 496px;
 	width: 746px;
+	min-height: 496px;
+	position: relative;
+	top: 33px;
+	display: inline-block;
 	padding: 20px;
 	margin: 0 1rem;
 	color: #141825;
@@ -26,6 +33,13 @@
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	font-family: -apple-system, BlinkMacSystemFont, 'Muli';
 	font-style: italic;
+}
+
+@media (max-width: 576px) {
+	.main {
+		margin: 0 0.3rem;
+		padding: 12px;
+	}
 }
 
 .monitorContainer {

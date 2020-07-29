@@ -10,7 +10,7 @@ const ModalHeader = ({ props: { portCode, onCloseModal } }) => {
   return (
     <header
       className="d-flex flex-row justify-content-between mb-2 bd-highlight"
-      style={{maxHeight: 44}}
+      style={window.innerWidth > 576 ? null : {maxHeight: 44}}
     >
       <img
         alt={name}
