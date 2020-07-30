@@ -9,7 +9,7 @@ import InfoSettings from '../layout/InfoSettings';
 import InfoMonitor from '../layout/InfoMonitor';
 import Loading from '../layout/Loading';
 
-const ModalSection = ({ portCode }) => {
+const PortSection = ({ portCode }) => {
   const throwError = useAsyncError();
   const [arrivalPeriod, setArrivalPeriod] = useState(1);
   const [departurePeriod, setDeparturePeriod] = useState(1);
@@ -109,7 +109,7 @@ const ModalSection = ({ portCode }) => {
               />
             </div>
 
-            <div className="monitorContainer">
+            <div className="monitor_container">
               <div className="row" style={{height: 329, margin: '0 -6px'}}>
                 <InfoMonitor flights={arrivalFlights} noFlights={noArrivalFlights} action="arrive" />
                 <InfoMonitor flights={departureFlights} noFlights={noDepartureFlights} action="depart" />
@@ -122,12 +122,12 @@ const ModalSection = ({ portCode }) => {
   )
 };
 
-ModalSection.defaultProps = {
+PortSection.defaultProps = {
   portCode: '',
 };
 
-ModalSection.propTypes = {
+PortSection.propTypes = {
   portCode: PropTypes.string,
 };
 
-export default ModalSection;
+export default PortSection;

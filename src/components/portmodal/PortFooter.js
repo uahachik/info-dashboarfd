@@ -1,13 +1,12 @@
 import React from 'react';
-import './ModalForm.css';
 import Moment from 'react-moment';
 
 import endOfInfoPeriod from '../../data/endOfInfoPeriod';
 
-const ModalFooter = () => {
+const PortFooter = () => {
   return (
     <footer
-      className="position-absolute w-100 py-2 text-center text-muted footerContainer"
+      className="footer_container text-muted"
     >
       <small>
         All information is provided as of yesterday. 
@@ -17,4 +16,4 @@ const ModalFooter = () => {
   )
 };
 
-export default ModalFooter;
+export default PortFooter;

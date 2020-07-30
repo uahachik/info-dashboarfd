@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import './ModalForm.css';
+import './PortModal.css';
 
 import useAnimation from '../../hooks/useAnimation';
-import ModalHeader from './ModalHeader';
-import ModalSection from './ModalSection';
-import ModalFooter from './ModalFooter';
+import PortHeader from './PortHeader';
+import PortSection from './PortSection';
+import PortFooter from './PortFooter';
 
-const modalRoot = document.getElementById('modal-root');
+const portRoot = document.getElementById('port-root');
 
-const ModalForm = ({ closeModal, portCode }) => {
+const PortModal = ({ closeModal, portCode }) => {
   const {transition, setTransition} = useAnimation();
 
   // @ Modal Transition
@@ -24,26 +24,25 @@ const ModalForm = ({ closeModal, portCode }) => {
   return ReactDOM.createPortal(
     <div className="wraper" style={transition} onClick={onCloseModal}>
       <div className="main" onClick={e => e.stopPropagation()}>
-        <ModalHeader props={{portCode, onCloseModal}} />
+        <PortHeader props={{portCode, onCloseModal}} />
 
         <div className="border-top border-info" />
 
-        <ModalSection portCode={portCode} />
+        <PortSection portCode={portCode} />
 
-        <ModalFooter />
-
+        <PortFooter />
       </div>
     </div>,
-    modalRoot
+    portRoot
   );
 }
 
-ModalForm.defaultProps = {
+PortModal.defaultProps = {
   onCloseModal: () => {}
 };
 
-ModalForm.propTypes = {
+PortModal.propTypes = {
   onCloseModal: PropTypes.func,
 };
 
-export default ModalForm;
+export default PortModal;

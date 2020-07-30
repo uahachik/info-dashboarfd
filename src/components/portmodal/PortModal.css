@@ -42,7 +42,7 @@
 	}
 }
 
-.monitorContainer {
+.monitor_container {
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -53,9 +53,13 @@
 	border-radius: 5px;
 }
 
-.footerContainer {
+.footer_container {
+	position: absolute;
 	top: 504px;
 	left: 0;
+	width: 100%;
+	padding: 0.5rem 0;
+	text-align: center;
 	background-color: #00162cfa;
 	border: 2px solid #6d6d6efa;
 	border-top: none;

@@ -26,10 +26,10 @@ const InfoMonitor = ({ flights, noFlights, action }) => {
   }
 
   return (
-    <div ref={monitorHeight} className="col px-1 infoMonitor" onScroll={removeMarquee}>
+    <div ref={monitorHeight} className="info_monitor col px-1" onScroll={removeMarquee}>
       <div className="container">
 
-        <div className="row monitorHeader">
+        <div className="row monitor_header">
           <div className="col-2 h-25" style={{paddingLeft: 0}}>
             CALLSIGN
           </div>

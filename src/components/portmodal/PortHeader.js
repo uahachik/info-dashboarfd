@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 import airports from '../../data/airports';
 
-const ModalHeader = ({ props: { portCode, onCloseModal } }) => {
+const PortHeader = ({ props: { portCode, onCloseModal } }) => {
   const airport = airports().find(port => port.code === portCode);
   const { name, logo } = airport;
 
   return (
     <header
       className="d-flex flex-row justify-content-between mb-2 bd-highlight"
-      style={window.innerWidth > 576 ? null : {maxHeight: 44}}
+      // style={window.innerWidth > 576 ? null : {maxHeight: 44}}
     >
       <img
         alt={name}
@@ -31,19 +31,19 @@ const ModalHeader = ({ props: { portCode, onCloseModal } }) => {
         onClick={onCloseModal}
       > 
         <span className="px-2 border border-info rounded-lg" aria-hidden="true">×</span> 
-      </button> 
+      </button>
     </header>
   )
 };
 
-ModalHeader.defaultProps = {
+PortHeader.defaultProps = {
   portCode: '',
   onCloseModal: () => {},
 };
 
-ModalHeader.propTypes = {
+PortHeader.propTypes = {
   portCode: PropTypes.string,
   onCloseModal: PropTypes.func,
 };
 
-export default ModalHeader;
+export default PortHeader;

@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 
 import airports from '../../data/airports';
-import ModalForm from '../../components/modalform/ModalForm';
+import PortModal from '../../components/portmodal/PortModal';
+import MobilePortModal from '../../components/mobileportmodal/MobilePortModal';
 
 const Dashboard = () => {
-	const [isOpenModal, setIsOpenModal] = useState(false);
+	const [isOpenPortModal, setIsOpenPortModal] = useState(false);
 	const [currentPort, setCurrentPort] = useState(null);
 
 	const onOpenModal = code => {
-		setIsOpenModal(true);
+		setIsOpenPortModal(true);
 		setCurrentPort(code);
 	}
 
 	const closeModal = () => {
     setTimeout(() => {
-        setIsOpenModal(false);
+        setIsOpenPortModal(false);
     }, 400);
 	};
 	
@@ -84,7 +85,11 @@ const Dashboard = () => {
 				})}
 			</div>
 
-			{isOpenModal && <ModalForm closeModal={closeModal} portCode={currentPort} />}
+			{isOpenPortModal && (
+				window.innerWidth > 768
+					? <PortModal closeModal={closeModal} portCode={currentPort} />
+					: <MobilePortModal closeModal={closeModal} portCode={currentPort} />
+			)}
 		</>
 	);
 };

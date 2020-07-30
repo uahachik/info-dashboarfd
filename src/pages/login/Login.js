@@ -28,7 +28,9 @@ const Login = ({ history, setIsAuth }) => {
 	return (
 		<div className="bg-info">
 			<div className="d-flex justify-content-center">
-				<video autoPlay muted loop id="myVideo" className="container vh-100 position-fixed mt-5 bg-info">
+				<video
+					autoPlay muted loop id="myVideo" style={mobileView ? {height: 760} : {height: '100vh'}}
+					className="container position-fixed mt-5 bg-info">
 					<source src="https://storage.googleapis.com/air-port-codes/videos/lax-big.mp4" type="video/mp4" />
 					Your browser does not support HTML5 video.
 				</video>
@@ -46,8 +48,11 @@ const Login = ({ history, setIsAuth }) => {
 					style={mobileView ? {border: 'none'} : null}
 				>
 
-					<h4 className="card-header d-flex justify-content-between">
-						<span className="text-primary">Login</span>
+					<h4
+						className="card-header d-flex justify-content-between"
+						style={mobileView ? {backgroundColor: '#00386d'} : {backgroundColor: '#e9ecef'}}
+					>
+						<span className={mobileView ? "text-light" : "text-primary"}>Login</span>
 						{badCredentials && <BadCredentials />}
 					</h4>
 					

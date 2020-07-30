@@ -1,4 +1,4 @@
-.infoMonitor {
+.info_monitor {
 	height: 331px;
 	border: 1px solid whitesmoke;
 	border-radius: 7px;
@@ -9,11 +9,11 @@
 	scrollbar-width: none;
 }
 
-.infoMonitor::-webkit-scrollbar {
+.info_monitor::-webkit-scrollbar {
 	display: none;
 }
 
-.monitorHeader {
+.monitor_header {
 	position: sticky;
 	top: 0;
 	left: 0;
