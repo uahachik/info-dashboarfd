@@ -29,8 +29,8 @@ const Login = ({ history, setIsAuth }) => {
 		<div className="bg-info">
 			<div className="d-flex justify-content-center">
 				<video
-					autoPlay muted loop id="myVideo" style={mobileView ? {height: 760} : {height: '100vh'}}
-					className="container position-fixed mt-5 bg-info">
+					autoPlay muted loop id="myVideo" style={mobileView ? {height: 760, padding: 0} : {height: '100vh'}}
+					className={mobileView ? "container position-fixed mt-4 bg-info" : "container position-fixed mt-5 bg-info"}>
 					<source src="https://storage.googleapis.com/air-port-codes/videos/lax-big.mp4" type="video/mp4" />
 					Your browser does not support HTML5 video.
 				</video>
@@ -44,7 +44,7 @@ const Login = ({ history, setIsAuth }) => {
 				}
 			>
 				<div
-					className={mobileView ? "card mb-5 bg-info" : "card mb-5 w-50"}
+					className={mobileView ? "card bg-info" : "card mb-5 w-50"}
 					style={mobileView ? {border: 'none'} : null}
 				>
 
@@ -103,7 +103,7 @@ const Login = ({ history, setIsAuth }) => {
 								/>
 							</div>
 
-							<div className={mobileView ? "mt-3" : null}>
+							<div className={mobileView ? "mt-2" : null}>
 								<input type="submit" value="Login" className="btn btn-primary mt-4 px-5" />
 							</div>
 						</form>
