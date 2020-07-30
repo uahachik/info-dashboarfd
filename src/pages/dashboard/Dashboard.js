@@ -28,7 +28,7 @@ const Dashboard = () => {
 			>
 				<h4
 					className="position-sticky w-100 text-center bg-light"
-					style={window.innerWidth > 576 ? headerStyle : {...headerStyle, fontSize: '1.25rem', opacity: 0.95}}
+					style={window.innerWidth > 576 ? headerStyle : {...headerStyle, fontSize: '3vh', opacity: 0.95}}
 				>
 					10 world's airports with the heaviest air traffic
 				</h4>

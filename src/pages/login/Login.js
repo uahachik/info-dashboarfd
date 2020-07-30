@@ -24,7 +24,7 @@ const Login = ({ history, setIsAuth }) => {
 		}
 	};
 
-	const mobileView = window.innerWidth < 468;
+	const mobileView = window.innerWidth <= 576;
 	return (
 		<div className="bg-info">
 			<div className="d-flex justify-content-center">
@@ -32,7 +32,7 @@ const Login = ({ history, setIsAuth }) => {
 					autoPlay muted loop id="myVideo" style={mobileView ? {height: 760, padding: 0} : {height: '100vh'}}
 					className={mobileView ? "container position-fixed mt-4 bg-info" : "container position-fixed mt-5 bg-info"}>
 					<source src="https://storage.googleapis.com/air-port-codes/videos/lax-big.mp4" type="video/mp4" />
-					Your browser does not support HTML5 video.
+					{/* Your browser does not support HTML5 video. */}
 				</video>
 			</div>
 			
@@ -64,11 +64,16 @@ const Login = ({ history, setIsAuth }) => {
 										Name is required
 									</label>
 								) : (
-									<label htmlFor="userName">Name</label>
+									<label
+										htmlFor="name"
+										style={mobileView ? {color: 'aliceblue'} : null}
+									>
+										Name
+									</label>
 								)}
 								<input
 									type="text"
-									name="userName"
+									name="name"
 									placeholder="What should I call you?"
 									value={userName}
 									onChange={e => setUserName(e.target.value)}
@@ -82,11 +87,16 @@ const Login = ({ history, setIsAuth }) => {
 							</div>
 							<div>
 								{userPassword.length === 0 ? (
-									<label htmlFor="userName" className="text-warning">
+									<label htmlFor="password" className="text-warning">
 										Password is required
 									</label>
 								) : (
-									<label htmlFor="userName">Password</label>
+									<label
+										htmlFor="password"
+										style={mobileView ? {color: 'aliceblue'} : null}
+									>
+										Password
+									</label>
 								)}
 								<input
 									type="password"
