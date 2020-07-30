@@ -46,12 +46,12 @@ const Dashboard = () => {
 								<tr>
 									<th
 										colSpan="2"
-										className="text-center font-weight-bold text-info"
-										style={{ backgroundColor: '#DDDDFF' }}
+										className="text-center font-weight-bold bg-light text-info"
+										style={{backgroundColor: '#e3ebff'}}
 									>
 										<div>
 											{name}<br/>
-											{subname} {code}
+											{subname}
 										</div>
 									</th>
 								</tr>
