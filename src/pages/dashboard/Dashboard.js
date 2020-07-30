@@ -16,7 +16,9 @@ const Dashboard = () => {
     setTimeout(() => {
         setIsOpenModal(false);
     }, 400);
-  };
+	};
+	
+	const headerStyle = {top: 0, zIndex: 1, color: '#033C73', textTransform: 'uppercase', padding: '16px 3px'};
 	return (
 		<>
 			<div 
@@ -25,10 +27,10 @@ const Dashboard = () => {
 			>
 				<h4
 					className="position-sticky w-100 text-center bg-light"
-					style={{top: 0, color: '#033C73', textTransform: 'uppercase', padding: '16px 3px', zIndex: 1}}
-					>
-						10 world's airports with the heaviest air traffic
-					</h4>
+					style={window.innerWidth > 576 ? headerStyle : {...headerStyle, fontSize: '1.25rem', opacity: 0.95}}
+				>
+					10 world's airports with the heaviest air traffic
+				</h4>
 
 				{airports().slice(0, 10).map(port => {
 					const { code, name, subname, logo, photo } = port;
@@ -39,7 +41,7 @@ const Dashboard = () => {
 							style={{width: '19em', height: 357, border: '2px ridge #DDDDFF'}}
 							onClick={() => onOpenModal(code)}
 						>
-							<tbody >
+							<tbody>
 								<tr>
 									<th
 										colSpan="2"

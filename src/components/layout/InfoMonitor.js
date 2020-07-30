@@ -26,7 +26,7 @@ const InfoMonitor = ({ flights, noFlights, action }) => {
   }
 
   return (
-    <div ref={monitorHeight} className="col px-1 monitor" onScroll={removeMarquee}>
+    <div ref={monitorHeight} className="col px-1 infoMonitor" onScroll={removeMarquee}>
       <div className="container">
 
         <div className="row monitorHeader">

@@ -21,7 +21,7 @@
 
 .main {
 	width: 746px;
-	min-height: 496px;
+	height: 504px;
 	position: relative;
 	top: 33px;
 	display: inline-block;
@@ -54,7 +54,7 @@
 }
 
 .footerContainer {
-	top: 495px;
+	top: 504px;
 	left: 0;
 	background-color: #00162cfa;
 	border: 2px solid #6d6d6efa;

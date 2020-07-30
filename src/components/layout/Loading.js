@@ -15,7 +15,7 @@ const Loading = () => {
 
 const loadingStyle = {
   position: 'absolute',
-  top: 72,
+  top: 82,
   left: 0,
   width: '100%',
   height: 424,

@@ -88,7 +88,7 @@ const ModalSection = ({ portCode }) => {
       
             <div
               className="d-flex justify-content-around"
-              style={window.innerWidth > 576 ? null : {flexFlow: 'column', alignItems: 'center'}}
+              style={window.innerWidth > 768 ? null : {flexFlow: 'column', alignItems: 'center'}}
             >
               <InfoSettings
                 settings={{
@@ -110,7 +110,7 @@ const ModalSection = ({ portCode }) => {
             </div>
 
             <div className="monitorContainer">
-              <div className="row" style={{height: 326, margin: '0 -6px'}}>
+              <div className="row" style={{height: 329, margin: '0 -6px'}}>
                 <InfoMonitor flights={arrivalFlights} noFlights={noArrivalFlights} action="arrive" />
                 <InfoMonitor flights={departureFlights} noFlights={noDepartureFlights} action="depart" />
               </div>

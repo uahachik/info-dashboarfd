@@ -13,10 +13,26 @@
 	z-index: 2;
 }
 
+@media (max-width: 576px) {
+	.dropdown {
+		right: -18px;
+		border: 0.8px solid #01236ed6;
+		border-radius: 5px;
+	}
+}
+
 .item {
 	padding: 0.25rem 15px 0.25rem 14px;
 	color: #1e90ff;
 	font-style: italic;
+}
+
+@media (max-width: 576px) {
+	.item {
+		margin: 0px 0px 1px 0px;
+		padding: 7px 26px 8px 31px;
+		border-radius: 5px;
+	}
 }
 
 .item:hover {

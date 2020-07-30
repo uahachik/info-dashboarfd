@@ -1,5 +1,5 @@
-.monitor {
-	height: 329px;
+.infoMonitor {
+	height: 331px;
 	border: 1px solid whitesmoke;
 	border-radius: 7px;
 	border: 1px solid whitesmoke;
@@ -9,7 +9,7 @@
 	scrollbar-width: none;
 }
 
-.monitor::-webkit-scrollbar {
+.infoMonitor::-webkit-scrollbar {
 	display: none;
 }
 
