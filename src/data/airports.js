@@ -6,7 +6,7 @@ const airports = () => {
       subname: 'International Airport',
       logo: {
         src: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Hartsfield%E2%80%93Jackson_Atlanta_International_Airport_logo.svg/500px-Hartsfield%E2%80%93Jackson_Atlanta_International_Airport_logo.svg.png',
-        width: '60%',
+        width: '80%',
       },
       photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Atlanta_Hartsfield-Jackson.jpg/375px-Atlanta_Hartsfield-Jackson.jpg',
     },
@@ -26,7 +26,7 @@ const airports = () => {
       subname: '',
       logo: {
         src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Los_Angeles_Airport_logo.svg/300px-Los_Angeles_Airport_logo.svg.png',
-        width: '54%',
+        width: '80%',
       },
       photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Los_Angeles_International_Airport_Aerial_Photo.jpg/450px-Los_Angeles_International_Airport_Aerial_Photo.jpg',
     },
@@ -66,7 +66,7 @@ const airports = () => {
       subname: '',
       logo: {
         src: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Heathrow_Logo_2013.svg/500px-Heathrow_Logo_2013.svg.png',
-        width: '21%',
+        width: '60%',
       },
       photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg/375px-London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg',
     },

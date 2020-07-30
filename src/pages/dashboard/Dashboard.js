@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Dashboard.css';
 
 import airports from '../../data/airports';
 import PortModal from '../../components/portmodal/PortModal';
@@ -19,16 +20,12 @@ const Dashboard = () => {
     }, 400);
 	};
 	
-	const headerStyle = {top: 0, zIndex: 1, color: '#033C73', textTransform: 'uppercase', padding: '16px 3px'};
 	return (
 		<>
-			<div 
-				className="position-absolute h-100 w-100 d-flex flex-wrap
-						justify-content-center align-items-center pb-2 bg-info overflow-auto"
-			>
+			<div className="dashboard bg-info">
 				<h4
-					className="position-sticky w-100 text-center bg-light"
-					style={window.innerWidth > 576 ? headerStyle : {...headerStyle, fontSize: '3vh', opacity: 0.95}}
+					className="dashboard_header bg-light"
+					style={{color: '#033C73'}}
 				>
 					10 world's airports with the heaviest air traffic
 				</h4>
@@ -39,7 +36,7 @@ const Dashboard = () => {
 						<table
 							key={name.slice(0, 5)}
 							className=" position-relative table mx-5"
-							style={{width: '19em', height: 357, border: '2px ridge #DDDDFF'}}
+							style={{height: 357, width: '19em', border: '2px ridge #DDDDFF'}}
 							onClick={() => onOpenModal(code)}
 						>
 							<tbody>
@@ -47,12 +44,10 @@ const Dashboard = () => {
 									<th
 										colSpan="2"
 										className="text-center font-weight-bold bg-light text-info"
-										style={{backgroundColor: '#e3ebff'}}
+										style={{height: 50, backgroundColor: '#e3ebff'}}
 									>
-										<div>
-											{name}<br/>
-											{subname}
-										</div>
+										{name}<br/>
+										{subname}
 									</th>
 								</tr>
 								<tr>
