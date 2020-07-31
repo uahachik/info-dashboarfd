@@ -5,7 +5,7 @@ import './MobilePortModal.css';
 
 import useAnimation from '../../hooks/useAnimation';
 import MobilePortHeader from './MobilePortHeader';
-// import PortSection from './PortSection';
+import MobilePortSection from './MobilePortSection';
 import MobilePortFooter from './MobilePortFooter';
 
 const mobilePortRoot = document.getElementById('mobile-port-root');
@@ -22,16 +22,16 @@ const MobilePortModal = ({ closeModal, portCode }) => {
   }
 
   return ReactDOM.createPortal(
-    <div className="mobile_wraper" style={transition} onClick={onCloseModal}>
-      <div className="mobile_main" onClick={e => e.stopPropagation()}>
+    <div className="mobile_wraper">
+      {/* <div className="mobile_main" onClick={e => e.stopPropagation()}> */}
         <MobilePortHeader props={{portCode, onCloseModal}} />
 
         <div className="border-top border-info" />
 
-        {/* <PortSection portCode={portCode} /> */}
+        <MobilePortSection portCode={portCode} />
 
         <MobilePortFooter />
-      </div>
+      {/* </div> */}
     </div>,
     mobilePortRoot
   );

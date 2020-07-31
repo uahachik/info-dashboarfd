@@ -9,7 +9,7 @@ const MobilePortHeader = ({ props: { portCode, onCloseModal } }) => {
 
   return (
     <header
-      className="d-flex flex-row justify-content-between mb-2 bd-highlight"
+      className="mobile_header"
       style={window.innerWidth > 576 ? null : {maxHeight: 44}}
     >
       <img
@@ -19,9 +19,9 @@ const MobilePortHeader = ({ props: { portCode, onCloseModal } }) => {
       />
 
       <div className="text-center" style={{marginTop: -5}}>
-        <h4 className="mx-1 overflow-hidden text-info" style={{maxHeight: 33, marginBottom: 0}}>
+        <h5 className="mx-1 overflow-hidden text-info" style={{maxHeight: 33, marginBottom: 0}}>
           {name}
-        </h4>
+        </h5>
         <h6 className="text-muted">ICAO code: {portCode}</h6>
       </div>
 

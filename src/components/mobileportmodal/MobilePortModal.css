@@ -1,0 +1,32 @@
+.mobile_wraper {
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+	padding: 10px 0;
+	background: darkkhaki;
+}
+
+.mobile_main {
+	/* height: 100vh;
+	position: relative; */
+}
+
+.mobile_header {
+	/* max-height: 44px; */
+	width: 94%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 8%;
+	margin: 5px 10px;
+}
+
+.mobile_section {
+	height: 84%;
+	background-color: gray;
+}
+
+.mobile_footer {
+	height: 8%;
+	background-color: lightgrey;
+}
